@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
                 String secondInput = editText2.getText().toString();
                 Float firstInputFloat = Float.parseFloat(firstInput);
                 Float secondInputFloat = Float.parseFloat(secondInput);
-                Float result = firstInputFloat + secondInputFloat;
+                float result = firstInputFloat + secondInputFloat;
                 String resultString = Float.toString(result);
             }
         });
