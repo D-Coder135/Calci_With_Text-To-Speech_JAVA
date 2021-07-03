@@ -11,6 +11,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
@@ -47,6 +49,8 @@ public class MainActivity extends AppCompatActivity {
                 Float secondInputFloat = Float.parseFloat(secondInput);
                 float result = firstInputFloat + secondInputFloat;
                 String resultString = Float.toString(result);
+                textToSpeech.speak(resultString, TextToSpeech.QUEUE_FLUSH, null);
+
             }
         });
     }
