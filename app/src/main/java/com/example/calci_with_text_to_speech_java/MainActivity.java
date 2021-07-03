@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.util.Locale;
+
 public class MainActivity extends AppCompatActivity {
     EditText editText1, editText2;
     Button add, sub, mul, div;
@@ -29,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         textToSpeech = new TextToSpeech(this, new OnInitListener() {
             @Override
             public void onInit(int status) {
+                textToSpeech.setLanguage(Locale.ENGLISH);
 
             }
         });
