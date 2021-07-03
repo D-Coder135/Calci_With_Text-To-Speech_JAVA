@@ -22,5 +22,6 @@ public class MainActivity extends AppCompatActivity {
         editText2 = (EditText)findViewById(R.id.editText2);
         add = (Button)findViewById(R.id.button);
         sub = (Button)findViewById(R.id.button2);
+        mul = (Button)findViewById(R.id.button3);
     }
 }
