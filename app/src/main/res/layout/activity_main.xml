@@ -70,4 +70,14 @@
         android:layout_marginStart="35dp"
         android:layout_marginBottom="82dp"
         android:text="Mul(*)" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="74dp"
+        android:layout_marginBottom="82dp"
+        android:text="Button" />
 </RelativeLayout>
