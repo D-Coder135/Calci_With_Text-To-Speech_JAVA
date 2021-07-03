@@ -6,6 +6,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.speech.tts.TextToSpeech.OnInitListener;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -28,11 +29,19 @@ public class MainActivity extends AppCompatActivity {
         sub = (Button)findViewById(R.id.button2);
         mul = (Button)findViewById(R.id.button3);
         div = (Button)findViewById(R.id.button4);
+
         textToSpeech = new TextToSpeech(this, new OnInitListener() {
             @Override
             public void onInit(int status) {
                 textToSpeech.setLanguage(Locale.ENGLISH);
                 textToSpeech.setSpeechRate(0.5f);
+            }
+        });
+
+        add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
             }
         });
     }
