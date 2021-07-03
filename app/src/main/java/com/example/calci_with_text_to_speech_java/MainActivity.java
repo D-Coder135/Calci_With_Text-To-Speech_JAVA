@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
                 Float firstInputFloat = Float.parseFloat(firstInput);
                 Float secondInputFloat = Float.parseFloat(secondInput);
                 Float result = firstInputFloat + secondInputFloat;
+                String resultString = Float.toString(result);
             }
         });
     }
