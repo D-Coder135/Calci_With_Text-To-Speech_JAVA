@@ -49,4 +49,14 @@
         android:layout_marginBottom="207dp"
         android:background="@android:color/holo_blue_bright"
         android:text="Add(+)" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="78dp"
+        android:layout_marginBottom="207dp"
+        android:text="Button" />
 </RelativeLayout>
