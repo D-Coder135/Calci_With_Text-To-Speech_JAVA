@@ -23,5 +23,6 @@ public class MainActivity extends AppCompatActivity {
         add = (Button)findViewById(R.id.button);
         sub = (Button)findViewById(R.id.button2);
         mul = (Button)findViewById(R.id.button3);
+        div = (Button)findViewById(R.id.button4);
     }
 }
