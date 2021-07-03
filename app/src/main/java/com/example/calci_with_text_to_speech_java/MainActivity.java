@@ -25,75 +25,60 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        editText1 = (EditText)findViewById(R.id.editText1);
-        editText2 = (EditText)findViewById(R.id.editText2);
-        add = (Button)findViewById(R.id.button);
-        sub = (Button)findViewById(R.id.button2);
-        mul = (Button)findViewById(R.id.button3);
-        div = (Button)findViewById(R.id.button4);
+        editText1 = findViewById(R.id.editText1);
+        editText2 = findViewById(R.id.editText2);
+        add = findViewById(R.id.button);
+        sub = findViewById(R.id.button2);
+        mul = findViewById(R.id.button3);
+        div = findViewById(R.id.button4);
 
-        textToSpeech = new TextToSpeech(this, new OnInitListener() {
-            @Override
-            public void onInit(int status) {
-                textToSpeech.setLanguage(Locale.ENGLISH);
-                textToSpeech.setSpeechRate(0.5f);
-            }
+        textToSpeech = new TextToSpeech(this, status -> {
+            textToSpeech.setLanguage(Locale.ENGLISH);
+            textToSpeech.setSpeechRate(0.5f);
         });
 
-        add.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String firstInput = editText1.getText().toString();
-                String secondInput = editText2.getText().toString();
-                Float firstInputFloat = Float.parseFloat(firstInput);
-                Float secondInputFloat = Float.parseFloat(secondInput);
-                float result = firstInputFloat + secondInputFloat;
-                String resultString = Float.toString(result);
-                resultView.setText(resultString);
-                textToSpeech.speak(resultString, TextToSpeech.QUEUE_FLUSH, null);
-            }
+        add.setOnClickListener(v -> {
+            String firstInput = editText1.getText().toString();
+            String secondInput = editText2.getText().toString();
+            Float firstInputFloat = Float.parseFloat(firstInput);
+            Float secondInputFloat = Float.parseFloat(secondInput);
+            float result = firstInputFloat + secondInputFloat;
+            String resultString = Float.toString(result);
+            resultView.setText(resultString);
+            textToSpeech.speak(resultString, TextToSpeech.QUEUE_FLUSH, null);
         });
 
-        sub.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String firstInput = editText1.getText().toString();
-                String secondInput = editText2.getText().toString();
-                Float firstInputFloat = Float.parseFloat(firstInput);
-                Float secondInputFloat = Float.parseFloat(secondInput);
-                float result = firstInputFloat - secondInputFloat;
-                String resultString = Float.toString(result);
-                resultView.setText(resultString);
-                textToSpeech.speak(resultString, TextToSpeech.QUEUE_FLUSH, null);
-            }
+        sub.setOnClickListener(v -> {
+            String firstInput = editText1.getText().toString();
+            String secondInput = editText2.getText().toString();
+            Float firstInputFloat = Float.parseFloat(firstInput);
+            Float secondInputFloat = Float.parseFloat(secondInput);
+            float result = firstInputFloat - secondInputFloat;
+            String resultString = Float.toString(result);
+            resultView.setText(resultString);
+            textToSpeech.speak(resultString, TextToSpeech.QUEUE_FLUSH, null);
         });
 
-        mul.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String firstInput = editText1.getText().toString();
-                String secondInput = editText2.getText().toString();
-                Float firstInputFloat = Float.parseFloat(firstInput);
-                Float secondInputFloat = Float.parseFloat(secondInput);
-                float result = firstInputFloat * secondInputFloat;
-                String resultString = Float.toString(result);
-                resultView.setText(resultString);
-                textToSpeech.speak(resultString, TextToSpeech.QUEUE_FLUSH, null);
-            }
+        mul.setOnClickListener(v -> {
+            String firstInput = editText1.getText().toString();
+            String secondInput = editText2.getText().toString();
+            Float firstInputFloat = Float.parseFloat(firstInput);
+            Float secondInputFloat = Float.parseFloat(secondInput);
+            float result = firstInputFloat * secondInputFloat;
+            String resultString = Float.toString(result);
+            resultView.setText(resultString);
+            textToSpeech.speak(resultString, TextToSpeech.QUEUE_FLUSH, null);
         });
 
-        div.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String firstInput = editText1.getText().toString();
-                String secondInput = editText2.getText().toString();
-                Float firstInputFloat = Float.parseFloat(firstInput);
-                Float secondInputFloat = Float.parseFloat(secondInput);
-                float result = firstInputFloat / secondInputFloat;
-                String resultString = Float.toString(result);
-                resultView.setText(resultString);
-                textToSpeech.speak(resultString, TextToSpeech.QUEUE_FLUSH, null);
-            }
+        div.setOnClickListener(v -> {
+            String firstInput = editText1.getText().toString();
+            String secondInput = editText2.getText().toString();
+            Float firstInputFloat = Float.parseFloat(firstInput);
+            Float secondInputFloat = Float.parseFloat(secondInput);
+            float result = firstInputFloat / secondInputFloat;
+            String resultString = Float.toString(result);
+            resultView.setText(resultString);
+            textToSpeech.speak(resultString, TextToSpeech.QUEUE_FLUSH, null);
         });
     }
 }
