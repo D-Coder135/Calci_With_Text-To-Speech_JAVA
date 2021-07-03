@@ -49,8 +49,8 @@ public class MainActivity extends AppCompatActivity {
                 Float secondInputFloat = Float.parseFloat(secondInput);
                 float result = firstInputFloat + secondInputFloat;
                 String resultString = Float.toString(result);
+                resultView.setText(resultString);
                 textToSpeech.speak(resultString, TextToSpeech.QUEUE_FLUSH, null);
-
             }
         });
     }
