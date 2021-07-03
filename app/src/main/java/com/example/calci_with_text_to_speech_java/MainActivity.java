@@ -67,5 +67,19 @@ public class MainActivity extends AppCompatActivity {
                 textToSpeech.speak(resultString, TextToSpeech.QUEUE_FLUSH, null);
             }
         });
+
+        mul.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String firstInput = editText1.getText().toString();
+                String secondInput = editText2.getText().toString();
+                Float firstInputFloat = Float.parseFloat(firstInput);
+                Float secondInputFloat = Float.parseFloat(secondInput);
+                float result = firstInputFloat * secondInputFloat;
+                String resultString = Float.toString(result);
+                resultView.setText(resultString);
+                textToSpeech.speak(resultString, TextToSpeech.QUEUE_FLUSH, null);
+            }
+        });
     }
 }
