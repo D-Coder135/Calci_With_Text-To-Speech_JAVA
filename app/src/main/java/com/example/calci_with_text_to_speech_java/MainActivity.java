@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String firstInput = editText1.getText().toString();
+                String secondInput = editText2.getText().toString();
             }
         });
     }
