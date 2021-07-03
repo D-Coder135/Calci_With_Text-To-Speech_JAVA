@@ -15,5 +15,6 @@
         android:layout_marginStart="3dp"
         android:layout_marginTop="137dp"
         android:ems="10"
+        android:hint="Enter the first number."
         android:inputType="textPersonName" />
 </RelativeLayout>
