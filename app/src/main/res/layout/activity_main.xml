@@ -48,5 +48,5 @@
         android:layout_marginStart="36dp"
         android:layout_marginBottom="207dp"
         android:background="@android:color/holo_blue_bright"
-        android:text="Add" />
+        android:text="Add(+)" />
 </RelativeLayout>
